@@ -2,9 +2,19 @@ import BlogModel from "models/blog";
 import { Link } from "react-router";
 
 export async function loader() {
-  return await BlogModel.find({
+  const blogsBase = await BlogModel.find({
     published: true,
-  }).select("title description _id");
+  })
+    .select("title description _id")
+    .lean();
+
+  const blogs = blogsBase.map(({ _id, title, description }) => ({
+    _id: String(_id),
+    title,
+    description,
+  }));
+
+  return blogs;
 }
 
 export default function Blog({
@@ -22,14 +32,17 @@ export default function Blog({
         <div className="container__content__no__data">No blogs found</div>
       ) : (
         loaderData.map((blog) => (
-          <Link
-            to={`/${blog._id}`}
-            key={blog._id}
-            className="container__content__entry"
-          >
-            <h2>{blog.title}</h2>
-            <p>{blog.description}</p>
-          </Link>
+          <div key={blog._id} className="container__content__entry">
+            <Link
+              to={`/${blog._id}`}
+              className="container__content__entry__title"
+            >
+              {blog.title}
+            </Link>
+            <div className="container__content__entry__description">
+              {blog.description}
+            </div>
+          </div>
         ))
       )}
     </>
