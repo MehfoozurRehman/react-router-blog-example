@@ -51,6 +51,8 @@ body {
   font-size: 1.5rem;
   color: #fff;
   margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
 }
 .container__content__no__data {
   font-size: 1rem;
@@ -58,13 +60,68 @@ body {
   margin: 1rem 0;
 }
 .container__content__entry {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  border: 1px solid #00506a;
-  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  word-break: break-all;
+  margin-bottom: 2rem;
+}
+.container__content__entry__title {
+  font-size: 1.2rem;
+  color: #fff;
+}
+.container__content__entry__title span {
+  color: #00506a;
+}
+.container__content__entry__title:is(a):hover {
+  color: #0089b7;
+}
+.container__content__entry__description {
+  font-size: 1rem;
+  color: #fff;
   margin: 1rem 0;
+}
+.container__content__entry__edit {
+  padding: 0.5rem 1rem;
+  font-size: 0.7rem;
+  border: 1px solid #00506a;
+  border-radius: 50px;
+  background-color: #00506a;
+  color: #fff;
+  cursor: pointer;
+  margin-left: auto;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+.container__content__entry__edit:hover {
+  background-color: #0089b7;
+}
+.container__content__entry__delete {
+  padding: 0.5rem 1rem;
+  font-size: 0.7rem;
+  border: 1px solid #690501;
+  border-radius: 50px;
+  background-color: #690501;
+  color: #fff;
+  cursor: pointer;
+  margin-left: auto;
+  text-decoration: none;
+}
+.container__content__entry__delete:hover {
+  background-color: #b70000;
+}
+.container__content__create {
+  padding: 0.5rem 1rem;
+  font-size: 0.7rem;
+  border: 1px solid #00506a;
+  border-radius: 50px;
+  background-color: #00506a;
+  color: #fff;
+  cursor: pointer;
+  margin-left: auto;
+  text-decoration: none;
+}
+.container__content__create:hover {
+  background-color: #0089b7;
 }
 .container__content__form {
   display: flex;
@@ -88,6 +145,25 @@ body {
   border-color: #0089b7;
 }
 .container__content__form input[type="text"]:focus {
+  border-color: #0089b7;
+}
+.container__content__form textarea {
+  padding: 0.8rem 1rem;
+  font-size: 0.7rem;
+  border: 1px solid #00506a;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #fff;
+  resize: vertical;
+  min-height: 100px;
+}
+.container__content__form textarea:focus {
+  outline: none;
+}
+.container__content__form textarea:hover {
+  border-color: #0089b7;
+}
+.container__content__form textarea:focus {
   border-color: #0089b7;
 }
 .container__content__form__checkbox {
