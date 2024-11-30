@@ -20,7 +20,6 @@ export async function loader() {
 
 export async function action({ request }: ActionFunctionArgs) {
   const formData = await request.formData();
-  console.log(formData.get("post"));
 
   if (!formData.get("post")) {
     return {
@@ -28,20 +27,12 @@ export async function action({ request }: ActionFunctionArgs) {
     };
   }
 
-  await new Promise((resolve) =>
-    setTimeout(
-      () =>
-        resolve(
-          data.push({
-            id: data.length + 1,
-            post: formData.get("post") as string,
-          })
-        ),
-      1000
-    )
-  );
+  await new Promise((resolve) => setTimeout(resolve, 1000));
 
-  console.log(data);
+  data.push({
+    id: data.length + 1,
+    post: formData.get("post") as string,
+  });
 
   return {
     message: "Post created",
