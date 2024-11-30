@@ -1,5 +1,5 @@
-import { Suspense } from "react";
-import { ActionFunctionArgs, Await, Form, useFetcher } from "react-router";
+import { Suspense, use } from "react";
+import { ActionFunctionArgs, useFetcher } from "react-router";
 
 let data = [
   {
@@ -72,18 +72,15 @@ export default function Blog({
           </div>
         }
       >
-        <List dataPromise={loaderData.data} />
+        <List
+          dataPromise={loaderData.data}
+          isLoading={fetcher.state === "loading"}
+        />
       </Suspense>
       <fetcher.Form method="post" key={fetcher.state}>
         <input type="text" name="post" />
-        <button
-          disabled={
-            fetcher.state === "loading" || fetcher.state === "submitting"
-          }
-        >
-          {fetcher.state === "loading" || fetcher.state === "submitting"
-            ? "Submitting..."
-            : "Submit"}
+        <button disabled={fetcher.state === "submitting"}>
+          {fetcher.state === "submitting" ? "Submitting..." : "Submit"}
         </button>
         {fetcher?.data?.message && (
           <p style={{ color: "green" }}>{fetcher.data.message}</p>
@@ -98,14 +95,18 @@ export default function Blog({
 
 function List({
   dataPromise,
+  isLoading,
 }: {
   dataPromise: Promise<{ id: number; post: string }[]>;
+  isLoading: boolean;
 }) {
+  const list = use(dataPromise);
+
   return (
-    <ul>
-      <Await resolve={dataPromise}>
-        {(list) => list?.map((post) => <li key={post.id}>{post.post}</li>)}
-      </Await>
+    <ul style={{ opacity: isLoading ? 0.5 : 1 }}>
+      {list?.map((post) => (
+        <li key={post.id}>{post.post}</li>
+      ))}
     </ul>
   );
 }
