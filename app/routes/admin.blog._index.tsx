@@ -2,9 +2,18 @@ import BlogModel from "models/blog";
 import { Link } from "react-router";
 
 export async function loader() {
-  return await BlogModel.find({
-    published: true,
-  }).select("title description _id");
+  const blogsBase = await BlogModel.find()
+    .select("title description published _id")
+    .lean();
+
+  const blogs = blogsBase.map(({ _id, title, description, published }) => ({
+    _id: String(_id),
+    title,
+    description,
+    published: published ? "Published" : "Draft",
+  }));
+
+  return blogs;
 }
 
 export default function Blog({
@@ -14,6 +23,7 @@ export default function Blog({
     _id: string;
     title: string;
     description: string;
+    published: string;
   }[];
 }) {
   return (
@@ -24,19 +34,36 @@ export default function Blog({
           <Link to="/admin/blog/create">Create</Link>
         </div>
       ) : (
-        loaderData.map((blog) => (
-          <div key={blog._id} className="container__content__entry">
-            <h2>{blog.title}</h2>
-            <p>{blog.description}</p>
+        <>
+          <div className="container__content__heading">
+            Blogs{" "}
             <Link
-              to={`/admin/blog/${blog._id}`}
-              className="container__content__entry__edit"
+              to="/admin/blog/create"
+              className="container__content__create"
             >
-              Edit
+              Create
             </Link>
-            <button>Delete</button>
           </div>
-        ))
+          {loaderData.map((blog) => (
+            <div key={blog._id} className="container__content__entry">
+              <div className="container__content__entry__title">
+                {blog.title} <span>({blog.published})</span>
+              </div>
+              <div className="container__content__entry__description">
+                {blog.description}
+              </div>
+              <Link
+                to={`/admin/blog/${blog._id}`}
+                className="container__content__entry__edit"
+              >
+                Edit
+              </Link>
+              <button className="container__content__entry__delete">
+                Delete
+              </button>
+            </div>
+          ))}
+        </>
       )}
     </>
   );
