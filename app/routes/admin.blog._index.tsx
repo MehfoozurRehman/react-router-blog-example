@@ -97,9 +97,9 @@ function BlogEntry({
 
   return (
     <div className="container__content__entry">
-      <div className="container__content__entry__title">
+      <Link to={`/${blog._id}`} className="container__content__entry__title">
         {blog.title} <span>({blog.published})</span>
-      </div>
+      </Link>
       <div className="container__content__entry__description">
         {blog.description}
       </div>
