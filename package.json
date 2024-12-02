@@ -16,7 +16,9 @@
     "mongoose": "^8.8.3",
     "react": "19.0.0-rc.1",
     "react-dom": "19.0.0-rc.1",
-    "react-router": "^7.0.1"
+    "react-markdown": "^9.0.1",
+    "react-router": "^7.0.1",
+    "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
     "@react-router/dev": "^7.0.1",
