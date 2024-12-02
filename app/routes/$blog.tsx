@@ -48,8 +48,6 @@ export async function loader({ params }: Route.LoaderArgs) {
     };
   }
 
-  console.log(file.toString());
-
   return {
     title,
     description,
