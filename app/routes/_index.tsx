@@ -1,7 +1,8 @@
 import BlogModel from "models/blog";
 import { Link } from "react-router";
+import { Route } from "./+types/_index";
 
-export async function loader() {
+export async function loader({}: Route.LoaderArgs) {
   const blogsBase = await BlogModel.find({
     published: true,
   })
@@ -17,15 +18,7 @@ export async function loader() {
   return blogs;
 }
 
-export default function Blog({
-  loaderData,
-}: {
-  loaderData: {
-    _id: string;
-    title: string;
-    description: string;
-  }[];
-}) {
+export default function Blog({ loaderData }: Route.ComponentProps) {
   return (
     <>
       {loaderData.length === 0 ? (
