@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@react-router/fs-routes':
         specifier: ^7.10.1
-        version: 7.10.1(@react-router/dev@7.10.1(@react-router/serve@7.10.1(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.9.3))(@types/node@22.10.1)(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sass@1.94.2)(typescript@5.9.3)(vite@6.4.1(@types/node@22.10.1)(sass@1.94.2)))(typescript@5.9.3)
+        version: 7.10.1(@react-router/dev@7.10.1(@react-router/serve@7.10.1(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.9.3))(@types/node@22.10.1)(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sass@1.96.0)(typescript@5.9.3)(vite@6.4.1(@types/node@22.10.1)(sass@1.96.0)))(typescript@5.9.3)
       '@react-router/node':
         specifier: ^7.10.1
         version: 7.10.1(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.9.3)
@@ -21,8 +21,8 @@ importers:
         specifier: ^5.1.32
         version: 5.1.32
       mongoose:
-        specifier: ^8.20.1
-        version: 8.20.1
+        specifier: ^8.20.2
+        version: 8.20.2
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -41,7 +41,7 @@ importers:
     devDependencies:
       '@react-router/dev':
         specifier: ^7.10.1
-        version: 7.10.1(@react-router/serve@7.10.1(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.9.3))(@types/node@22.10.1)(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sass@1.94.2)(typescript@5.9.3)(vite@6.4.1(@types/node@22.10.1)(sass@1.94.2))
+        version: 7.10.1(@react-router/serve@7.10.1(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.9.3))(@types/node@22.10.1)(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sass@1.96.0)(typescript@5.9.3)(vite@6.4.1(@types/node@22.10.1)(sass@1.96.0))
       '@types/node':
         specifier: ^22
         version: 22.10.1
@@ -52,17 +52,17 @@ importers:
         specifier: ^18.3.7
         version: 18.3.7(@types/react@18.3.27)
       sass:
-        specifier: ^1.94.2
-        version: 1.94.2
+        specifier: ^1.96.0
+        version: 1.96.0
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
       vite:
         specifier: ^6.4.1
-        version: 6.4.1(@types/node@22.10.1)(sass@1.94.2)
+        version: 6.4.1(@types/node@22.10.1)(sass@1.96.0)
       vite-tsconfig-paths:
         specifier: ^5.1.4
-        version: 5.1.4(typescript@5.9.3)(vite@6.4.1(@types/node@22.10.1)(sass@1.94.2))
+        version: 5.1.4(typescript@5.9.3)(vite@6.4.1(@types/node@22.10.1)(sass@1.96.0))
 
 packages:
 
@@ -1279,8 +1279,8 @@ packages:
       socks:
         optional: true
 
-  mongoose@8.20.1:
-    resolution: {integrity: sha512-G+n3maddlqkQrP1nXxsI0q20144OSo+pe+HzRRGqaC4yK3FLYKqejqB9cbIi+SX7eoRsnG23LHGYNp8n7mWL2Q==}
+  mongoose@8.20.2:
+    resolution: {integrity: sha512-U0TPupnqBOAI3p9H9qdShX8/nJUBylliRcHFKuhbewEkM7Y0qc9BbrQR9h4q6+1easoZqej7cq2Ee36AZ0gMzQ==}
     engines: {node: '>=16.20.1'}
 
   morgan@1.10.0:
@@ -1461,8 +1461,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sass@1.94.2:
-    resolution: {integrity: sha512-N+7WK20/wOr7CzA2snJcUSSNTCzeCGUTFY3OgeQP3mZ1aj9NMQ0mSTXwlrnd89j33zzQJGqIN52GIOmYrfq46A==}
+  sass@1.96.0:
+    resolution: {integrity: sha512-8u4xqqUeugGNCYwr9ARNtQKTOj4KmYiJAVKXf2CTIivTCR51j96htbMKWDru8H5SaQWpyVgTfOF8Ylyf5pun1Q==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -2043,7 +2043,7 @@ snapshots:
       '@parcel/watcher-win32-x64': 2.5.0
     optional: true
 
-  '@react-router/dev@7.10.1(@react-router/serve@7.10.1(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.9.3))(@types/node@22.10.1)(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sass@1.94.2)(typescript@5.9.3)(vite@6.4.1(@types/node@22.10.1)(sass@1.94.2))':
+  '@react-router/dev@7.10.1(@react-router/serve@7.10.1(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.9.3))(@types/node@22.10.1)(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sass@1.96.0)(typescript@5.9.3)(vite@6.4.1(@types/node@22.10.1)(sass@1.96.0))':
     dependencies:
       '@babel/core': 7.28.5
       '@babel/generator': 7.28.5
@@ -2073,8 +2073,8 @@ snapshots:
       semver: 7.6.3
       tinyglobby: 0.2.15
       valibot: 1.2.0(typescript@5.9.3)
-      vite: 6.4.1(@types/node@22.10.1)(sass@1.94.2)
-      vite-node: 3.2.4(@types/node@22.10.1)(sass@1.94.2)
+      vite: 6.4.1(@types/node@22.10.1)(sass@1.96.0)
+      vite-node: 3.2.4(@types/node@22.10.1)(sass@1.96.0)
     optionalDependencies:
       '@react-router/serve': 7.10.1(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.9.3)
       typescript: 5.9.3
@@ -2101,9 +2101,9 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
-  '@react-router/fs-routes@7.10.1(@react-router/dev@7.10.1(@react-router/serve@7.10.1(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.9.3))(@types/node@22.10.1)(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sass@1.94.2)(typescript@5.9.3)(vite@6.4.1(@types/node@22.10.1)(sass@1.94.2)))(typescript@5.9.3)':
+  '@react-router/fs-routes@7.10.1(@react-router/dev@7.10.1(@react-router/serve@7.10.1(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.9.3))(@types/node@22.10.1)(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sass@1.96.0)(typescript@5.9.3)(vite@6.4.1(@types/node@22.10.1)(sass@1.96.0)))(typescript@5.9.3)':
     dependencies:
-      '@react-router/dev': 7.10.1(@react-router/serve@7.10.1(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.9.3))(@types/node@22.10.1)(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sass@1.94.2)(typescript@5.9.3)(vite@6.4.1(@types/node@22.10.1)(sass@1.94.2))
+      '@react-router/dev': 7.10.1(@react-router/serve@7.10.1(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.9.3))(@types/node@22.10.1)(react-router@7.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(sass@1.96.0)(typescript@5.9.3)(vite@6.4.1(@types/node@22.10.1)(sass@1.96.0))
       minimatch: 9.0.5
     optionalDependencies:
       typescript: 5.9.3
@@ -3045,7 +3045,7 @@ snapshots:
       bson: 6.10.4
       mongodb-connection-string-url: 3.0.2
 
-  mongoose@8.20.1:
+  mongoose@8.20.2:
     dependencies:
       bson: 6.10.4
       kareem: 2.6.3
@@ -3281,7 +3281,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sass@1.94.2:
+  sass@1.96.0:
     dependencies:
       chokidar: 4.0.1
       immutable: 5.0.3
@@ -3464,13 +3464,13 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite-node@3.2.4(@types/node@22.10.1)(sass@1.94.2):
+  vite-node@3.2.4(@types/node@22.10.1)(sass@1.96.0):
     dependencies:
       cac: 6.7.14
       debug: 4.4.3
       es-module-lexer: 1.7.0
       pathe: 2.0.3
-      vite: 6.4.1(@types/node@22.10.1)(sass@1.94.2)
+      vite: 6.4.1(@types/node@22.10.1)(sass@1.96.0)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -3485,18 +3485,18 @@ snapshots:
       - tsx
       - yaml
 
-  vite-tsconfig-paths@5.1.4(typescript@5.9.3)(vite@6.4.1(@types/node@22.10.1)(sass@1.94.2)):
+  vite-tsconfig-paths@5.1.4(typescript@5.9.3)(vite@6.4.1(@types/node@22.10.1)(sass@1.96.0)):
     dependencies:
       debug: 4.3.7
       globrex: 0.1.2
       tsconfck: 3.1.4(typescript@5.9.3)
     optionalDependencies:
-      vite: 6.4.1(@types/node@22.10.1)(sass@1.94.2)
+      vite: 6.4.1(@types/node@22.10.1)(sass@1.96.0)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@6.4.1(@types/node@22.10.1)(sass@1.94.2):
+  vite@6.4.1(@types/node@22.10.1)(sass@1.96.0):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)
@@ -3507,7 +3507,7 @@ snapshots:
     optionalDependencies:
       '@types/node': 22.10.1
       fsevents: 2.3.3
-      sass: 1.94.2
+      sass: 1.96.0
 
   webidl-conversions@7.0.0: {}
 
