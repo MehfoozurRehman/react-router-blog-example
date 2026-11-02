@@ -3,17 +3,19 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node api.js && react-router build",
-    "dev": "node api.js && react-router dev",
-    "start": "node api.js && react-router-serve ./build/server/index.js",
+    "build": "node init && react-router build",
+    "dev": "node init && react-router dev",
+    "start": "node init && react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc --build --noEmit"
   },
   "dependencies": {
     "@react-router/fs-routes": "^7.11.0",
     "@react-router/node": "^7.11.0",
     "@react-router/serve": "^7.11.0",
+    "dotenv": "^8.2.0",
     "isbot": "^5.1.32",
     "mongoose": "^8.20.4",
+    "node-fetch": "^3.3.2",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-markdown": "^9.1.0",
